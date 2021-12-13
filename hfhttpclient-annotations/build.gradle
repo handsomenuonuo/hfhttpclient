@@ -1,0 +1,29 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+}
+
+group = 'org.hf'
+version = '1.0.1'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_7
+    targetCompatibility = JavaVersion.VERSION_1_7
+}
+
+//添加发布到jitpack脚本
+//apply from : "publishNative.gradle"
+
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            maven(MavenPublication) {
+                from components.java
+                groupId = 'org.hf'
+                artifactId = 'annotations'
+                version = '1.0.1'
+            }
+        }
+    }
+}

@@ -1,0 +1,3 @@
+include ':hfhttpclient-annotations'
+include ':hfhttpclient-compiler'
+include ':hfhttpclient'

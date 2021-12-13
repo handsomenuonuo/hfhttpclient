@@ -1,0 +1,27 @@
+apply plugin: 'maven'
+
+ext {
+// 从Github上clone下来的项目的本地地址
+  //  GITHUB_REPO_PATH ="D:\\Work\\Project\\Mine\\HfHttpClient"
+    PUBLISH_GROUP_ID ='org.hf'  // 可以随意取，一般取包名
+    PUBLISH_ARTIFACT_ID ='hfhttpclient-annotations'   //这个是刚才在github创建的仓库名字
+    PUBLISH_VERSION ='0.0.1'   //版本号
+}
+
+//上传到Maven仓库的task
+uploadArchives {
+    repositories {
+        mavenDeployer {
+           // def deployPath = file(project.GITHUB_REPO_PATH)
+            repository(url: uri("../repository"))
+            pom.project {
+                groupId project.PUBLISH_GROUP_ID
+                artifactId project.PUBLISH_ARTIFACT_ID
+                version project.PUBLISH_VERSION
+            }
+        }
+    }
+
+    //添加生成javadoc脚本
+    apply from : "javadoc.gradle"
+}

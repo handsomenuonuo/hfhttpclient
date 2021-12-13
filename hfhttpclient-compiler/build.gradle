@@ -1,0 +1,37 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+}
+
+group = 'org.hf'
+version = '1.0.1'
+
+dependencies {
+    implementation project(':hfhttpclient-annotations')
+
+    implementation 'com.google.auto.service:auto-service:1.0-rc7'
+    annotationProcessor 'com.google.auto.service:auto-service:1.0-rc7'
+    implementation 'com.google.auto:auto-common:0.8'
+    implementation 'com.squareup:javapoet:1.8.0'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_7
+    targetCompatibility = JavaVersion.VERSION_1_7
+}
+
+//添加发布到jitpack脚本
+//apply from : "publishNative.gradle"
+
+afterEvaluate {
+    publishing {
+        publications {
+            maven(MavenPublication) {
+                from components.java
+                groupId = 'org.hf'
+                artifactId = 'compiler'
+                version = '1.0.1'
+            }
+        }
+    }
+}
