@@ -2,7 +2,7 @@
 ----
 [![](https://jitpack.io/v/handsomenuonuo/hfhttpclient.svg)](https://jitpack.io/#handsomenuonuo/hfhttpclient)
 
-一个方便开发者的网络请求库，自动生成网络请求代码，使用了[Rxjava]() + [Retrofit]() + [OkHttp]()
+一个方便开发者的网络请求库，自动生成网络请求代码，使用了[Rxjava2](https://github.com/ReactiveX/RxJava/tree/2.x) + [Retrofit2](https://square.github.io/retrofit/) + [OkHttp3](https://square.github.io/okhttp/)
 ----
 
 ## 导入方法
@@ -23,7 +23,7 @@ dependencies {
 }
 
 ```
-### 3、最后不能忘了导入 [Rxjava]()、[Retrofit]()、[OkHttp]() 的library
+### 3、最后不能忘了导入 [Rxjava2](https://github.com/ReactiveX/RxJava/tree/2.x)、[Retrofit2](https://square.github.io/retrofit/)、[OkHttp3](https://square.github.io/okhttp/) 的library
 
 ```gradle
 dependencies {
