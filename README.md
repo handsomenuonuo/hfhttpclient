@@ -41,7 +41,7 @@ dependencies {
 
 ```
 ## 简单使用方法
-### HfInterface用于配置请求的baseUrl，最简单的配置为直接设置url的string，其他用法见下面的 [HfInterface的另一种用法]()。
+### HfInterface用于配置请求的baseUrl，最简单的配置为直接设置url的string，其他用法见下面的 [HfInterface的另一种用法](#HfInterface的另一种用法)。
 ### HfApi用于配置请求的connectTimeout和readTimeout，单位为秒，可以省略，默认为30秒。
 ### [HfInterface和HfApi是必须的配置]()
 ### 1、示例如下：
