@@ -41,7 +41,7 @@ dependencies {
 
 ```
 ## 简单使用方法
-### HfInterface用于配置请求的baseUrl，最简单的配置为直接设置url的string，其他用法见下面的 [HfInterface的另一种用法](#HfInterface的另一种用法)。
+### HfInterface用于配置请求的baseUrl，最简单的配置为直接设置url的string，其他用法见下面的 [HfInterface的另一种用法](#1)。
 ### HfApi用于配置请求的connectTimeout和readTimeout，单位为秒，可以省略，默认为30秒。
 ### [HfInterface和HfApi是必须的配置]()
 ### 1、示例如下：
@@ -85,7 +85,7 @@ public interface TestService {
         });
 ```
 ---
-## HfInterface的另一种用法，适用于动态改变的baseUrl。
+## <span id='1'>HfInterface的另一种用法，适用于动态改变的baseUrl。</span>
 ### 注意：
 #### baseUrl 和 getUrl 必须配置一个，如果两个都配置，则会按baseUrl来进行配置。
 #### getUrl的class必须实现[org.hf.hfhttpclient.interfaces.HfUrl](https://github.com/handsomenuonuo/hfhttpclient/blob/main/hfhttpclient/src/main/java/org/hf/hfhttpclient/interfaces/HfUrl.java)接口，并且 有且只能有一个空构造函数。
